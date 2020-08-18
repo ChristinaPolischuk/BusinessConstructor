@@ -1,0 +1,46 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+    url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin btn($width, $height, $font_size) {
+  width: $width;
+  height: $height;
+  font-size: $font_size;
+}
+
+%roboto-300 {
+  font-family: "Roboto-Light", Arial, sans-serif;
+  font-weight: 300;
+}
+
+%roboto-400 {
+  font-family: "Roboto-Regular", Arial, sans-serif;
+  font-weight: 400;
+}
+
+%roboto-700 {
+  font-family: "Roboto-Bold", Arial, sans-serif;
+  font-weight: 700;
+}
+
+%roboto-900 {
+  font-family: "Roboto-Black", Arial, sans-serif;
+  font-weight: 900;
+}
+
+%redhatdisplay-400 {
+  font-family: "RedHatDisplay-Regular", Arial, sans-serif;
+  font-weight: 400;
+}
+
+%redhatdisplay-700 {
+  font-family: "RedHatDisplay-Bold", Arial, sans-serif;
+  font-weight: 700;
+}

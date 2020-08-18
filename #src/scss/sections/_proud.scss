@@ -1,0 +1,102 @@
+.proud {
+  padding: 40px 0 50px;
+
+  @media (min-width: 768px) {
+    padding: 100px 0 50px;
+  }
+
+  &-inner {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-header {
+    margin: 0 auto 10px;
+    max-width: 220px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin: 0 30px 0 0;
+      text-align: left;
+    }
+
+    @media (min-width: 1440px) {
+      margin: 0 90px 0 0;
+    }
+
+    &__description {
+      @media (min-width: 1440px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-title {
+    @media (min-width: 1440px) {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+
+  &-slider {
+    max-width: 454px;
+    margin: 0 auto;
+    padding: 25px 25px 10px;
+    background-color: #ececec;
+    position: relative;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__person {
+      &-photo {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: #cecece;
+      }
+
+      &-name {
+        font-size: 20px;
+        line-height: 23px;
+        @extend %roboto-700;
+      }
+
+      &-quote {
+        margin: 10px 0;
+        line-height: 20px;
+      }
+    }
+
+    &__arrows {
+      position: absolute;
+      z-index: 5;
+      left: 50%;
+      bottom: 0;
+      padding: 10px;
+      width: 117px !important;
+      height: 42px;
+      background-color: #ffffff;
+    }
+
+    &__arrow {
+      fill: #dbdbdb;
+      transition: fill 0.3s, transform 0.3s;
+
+      &:hover {
+        fill: $accent_color;
+        transform: scale(1.3);
+      }
+    }
+  }
+}
