@@ -1,129 +1,122 @@
 .main {
-  padding-top: 120px;
-  background-color: $bg_dark;
-  color: #ffffff;
-  transform: skewY(-20deg);
-  position: relative;
+	padding-top: 120px;
+	background-color: $bg_dark;
+	color: #ffffff;
+	transform: skewY(-20deg);
+	position: relative;
 
-  @media (min-width: 640px) {
-    transform: skewY(-7deg);
-  }
+	@media (min-width: 640px) {
+		transform: skewY(-7deg);
+	}
 
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: $bg_dark;
-    height: 50%;
-    transform: skewY(20deg);
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: $bg_dark;
+		height: 50%;
+		transform: skewY(20deg);
 
-    @media (min-width: 640px) {
-      transform: skewY(7deg);
-    }
-  }
+		@media (min-width: 640px) {
+			transform: skewY(7deg);
+		}
+	}
 
-  &__inner {
-    transform: skewY(20deg);
+	&__inner {
+		transform: skewY(20deg);
 
-    @media (min-width: 640px) {
-      display: flex;
-      transform: skewY(7deg);
-    }
+		@media (min-width: 640px) {
+			display: flex;
+			justify-content: space-between;
+			transform: skewY(7deg);
+		}
+	}
 
-    @media (min-width: 768px) {
-      justify-content: center;
-    }
-  }
+	&__block {
+		max-width: 290px;
+		margin: 0 auto;
 
-  &__block {
-    max-width: 290px;
-    margin: 0 auto;
+		@media (min-width: 768px) {
+			margin: 0;
+		}
 
-    @media (min-width: 768px) {
-      margin: 0;
-    }
+		@media (min-width: 1440px) {
+			max-width: 358px;
+		}
 
-    @media(min-width: 1140px) {
-      max-width: 358px;
-    }
+		&:first-child {
+			margin-bottom: 60px;
 
-    &:first-child {
-      margin-bottom: 60px;
+			@media (min-width: 640px) {
+				margin-bottom: 0;
+			}
+		}
+	}
 
-      @media (min-width: 640px) {
-        margin-bottom: 0;
-      }
+	&__slogan {
+		margin-bottom: 20px;
+		font-size: 34px;
+		line-height: 40px;
+		@extend %roboto-700;
 
-      @media (min-width: 768px) {
-        margin-right: 70px;
-      }
-    }
-  }
+		@media (min-width: 1440px) {
+			font-size: 38px;
+			line-height: 45px;
+		}
+	}
 
-  &__slogan {
-    margin-bottom: 20px;
-    font-size: 34px;
-    line-height: 40px;
-    @extend %roboto-700;
+	&__title {
+		margin-bottom: 20px;
+		font-size: 56px;
+		line-height: 64px;
+		text-transform: uppercase;
+		@extend %roboto-900;
+		color: #ffffff;
 
-    @media(min-width: 1440px) {
-      font-size: 38px;
-      line-height: 45px;
-    }
-  }
+		@media (min-width: 1440px) {
+			font-size: 70px;
+			line-height: 76px;
+		}
+	}
 
-  &__title {
-    margin-bottom: 20px;
-    font-size: 56px;
-    line-height: 64px;
-    text-transform: uppercase;
-    @extend %roboto-900;
-    color: #ffffff;
+	&__description {
+		margin-bottom: 20px;
+		padding-left: 15px;
+		position: relative;
+		font-size: 18px;
+		line-height: 24px;
+		@extend %roboto-700;
 
-    @media(min-width: 1440px) {
-      font-size: 70px;
-      line-height: 76px;
-    }
-  }
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 1px;
+			background-color: #ffffff;
+		}
+	}
 
-  &__description {
-    margin-bottom: 20px;
-    padding-left: 15px;
-    position: relative;
-    font-size: 18px;
-    line-height: 24px;
-    @extend %roboto-700;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 1px;
-      background-color: #ffffff;
-    }
-  }
-
-  &__btn {
-    @include btn(144px, 40px, 18px);
-  }
+	&__btn {
+		@include btn(144px, 40px, 18px);
+	}
 }
 
-@supports (background-clip:text) or (-webkit-background-clip:text) {
-  .main__title {
-    background-image: url('../img/bgmobile_main-title.png');
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-position: 3px 10px;
-    color: #fff;
-    -webkit-text-fill-color: transparent;
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+	.main__title {
+		background-image: url("../img/bgmobile_main-title.png");
+		background-clip: text;
+		-webkit-background-clip: text;
+		background-position: 3px 10px;
+		color: #fff;
+		-webkit-text-fill-color: transparent;
 
-    @media(min-width: 1440px) {
-      background-image: url('../img/bg_main-title.png');
-    }
-  }
+		@media (min-width: 1440px) {
+			background-image: url("../img/bg_main-title.png");
+		}
+	}
 }
