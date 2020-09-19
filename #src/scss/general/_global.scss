@@ -49,199 +49,40 @@ body {
 	min-width: 320px;
 	overflow-x: hidden;
 
-	@extend %roboto-300;
-	font-size: 14px;
-	line-height: 24px;
-	color: $text_color;
+	background-color: $black;
+	color: #ffffff;
+
+	@extend %nunito-400;
 }
 
 .container {
 	padding: 0 15px;
 
 	@media (min-width: 1200px) {
-		padding: 0;
 		margin: 0 auto;
-		max-width: 1140px;
-	}
-
-	&__inner {
-		max-width: 760px;
-		margin: 0 auto;
-	}
-}
-
-.section-title {
-	margin-bottom: 15px;
-	font-size: 30px;
-	line-height: 35px;
-	@extend %roboto-700;
-
-	@media (min-width: 1024px) {
-		font-size: 34px;
-		line-height: 40px;
-	}
-}
-
-.section-heading {
-	margin-bottom: 15px;
-	font-size: 30px;
-	line-height: 35px;
-	text-transform: uppercase;
-	@extend %roboto-900;
-
-	@media (min-width: 1024px) {
-		margin-bottom: 0;
-	}
-
-	@media (min-width: 1024px) {
-		margin-bottom: 0;
-		font-size: 34px;
-		line-height: 40px;
-	}
-
-	span {
-		display: block;
-		font-size: 30px;
-		@extend %roboto-300;
-	}
-}
-
-.btn,
-.btn__bordered {
-	padding: 0 10px;
-	color: #ffffff;
-	font-weight: 700;
-	border-radius: 20px;
-	transition: filter 0.3s;
-	text-transform: capitalize;
-
-	&:hover {
-		filter: invert(100%);
+		max-width: 1310px;
+		min-width: 320px;
 	}
 }
 
 .btn {
+	height: 40px;
+	min-width: 210px;
 	background-color: $accent_color;
-
-	&__bordered {
-		border: 1px solid $accent_color;
+	color: #ffffff;
+	border-radius: 5px;
+	@extend %nunito-600;
+	@media (min-width: 768px) {
+		height: 60px;
 	}
 }
 
-.calculator {
-	background: url("../img/bg_calculator.png") no-repeat top center;
-	background-size: 99% 100%;
-	box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.25);
+.logo {
+	display: block;
+	background: url("../img/logo.png") no-repeat;
+	background-size: cover;
+}
 
-	&__inner {
-		padding: 10px;
-		text-align: center;
-	}
-
-	&__title {
-		max-width: 250px;
-		margin: 30px auto 15px;
-		font-size: 28px;
-		line-height: 36px;
-		@extend %roboto-900;
-		text-transform: uppercase;
-
-		@media (min-width: 1440px) {
-			font-size: 32px;
-			line-height: 40px;
-		}
-	}
-
-	&__descr {
-		max-width: 200px;
-		margin: 0 auto;
-		font-size: 12px;
-		line-height: 20px;
-	}
-
-	&__form {
-		padding: 20px 20px 30px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		&-group {
-			position: relative;
-			margin-bottom: 10px;
-
-			&.full {
-				width: 100%;
-			}
-
-			&.half {
-				width: 45%;
-			}
-		}
-
-		&-select {
-			padding: 10px 0;
-			width: 100%;
-			max-width: 100%;
-			box-sizing: border-box;
-			border: none;
-			border-bottom: 1px solid #fff;
-			-moz-appearance: none;
-			-webkit-appearance: none;
-			appearance: none;
-			background-color: transparent;
-			color: #fff;
-			@extend %redhatdisplay-700;
-			font-size: 12px;
-			line-height: 16px;
-
-			&::-ms-expand {
-				display: none;
-			}
-
-			&:focus {
-				outline: none;
-			}
-
-			option {
-				font-weight: normal;
-				color: $text_color;
-			}
-
-			&_arrow {
-				position: absolute;
-				right: 0;
-				bottom: 12px;
-				transition: transform 0.3s;
-			}
-		}
-
-		&-price {
-			color: $accent_color;
-			margin: 0 auto;
-			font-size: 26px;
-			line-height: 40px;
-			@extend %roboto-900;
-		}
-
-		&-buttons {
-			margin: 0 auto;
-		}
-
-		&-btn {
-			margin-right: 10px;
-			@include btn(102px, 40px, 16px);
-		}
-
-		&-discount {
-			display: inline-block;
-			width: 112px;
-			height: 40px;
-			line-height: 40px;
-			border-radius: 20px;
-			background-color: transparent;
-			border: 1px solid $accent_color;
-			font-size: 16px;
-			@extend %roboto-700;
-		}
-	}
+.chat {
+	display: none;
 }

@@ -1,46 +1,55 @@
 @mixin font($font_name, $file_name, $weight, $style) {
-  @font-face {
-    font-family: $font_name;
-    font-display: swap;
-    src: url('../fonts/#{$file_name}.woff') format('woff'),
-    url('../fonts/#{$file_name}.woff2') format('woff2');
-    font-weight: #{$weight};
-    font-style: #{$style};
-  }
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
 }
 
 @mixin btn($width, $height, $font_size) {
-  width: $width;
-  height: $height;
-  font-size: $font_size;
+	width: $width;
+	height: $height;
+	font-size: $font_size;
+}
+
+%roboto-200 {
+	font-family: "Roboto-Thin", Arial, sans-serif;
+	font-weight: 200;
 }
 
 %roboto-300 {
-  font-family: "Roboto-Light", Arial, sans-serif;
-  font-weight: 300;
+	font-family: "Roboto-Light", Arial, sans-serif;
+	font-weight: 300;
 }
 
-%roboto-400 {
-  font-family: "Roboto-Regular", Arial, sans-serif;
-  font-weight: 400;
+%nunito-200 {
+	font-family: "Nunito-ExtraLight", Arial, sans-serif;
+	font-weight: 200;
 }
 
-%roboto-700 {
-  font-family: "Roboto-Bold", Arial, sans-serif;
-  font-weight: 700;
+%nunito-300 {
+	font-family: "Nunito-Light", Arial, sans-serif;
+	font-weight: 300;
 }
 
-%roboto-900 {
-  font-family: "Roboto-Black", Arial, sans-serif;
-  font-weight: 900;
+%nunito-400 {
+	font-family: "Nunito-Regular", Arial, sans-serif;
+	font-weight: 400;
 }
 
-%redhatdisplay-400 {
-  font-family: "RedHatDisplay-Regular", Arial, sans-serif;
-  font-weight: 400;
+%nunito-600 {
+	font-family: "Nunito-SemiBold", Arial, sans-serif;
+	font-weight: 600;
 }
 
-%redhatdisplay-700 {
-  font-family: "RedHatDisplay-Bold", Arial, sans-serif;
-  font-weight: 700;
+%nunito-700 {
+	font-family: "Nunito-Bold", Arial, sans-serif;
+	font-weight: 700;
+}
+
+%nunito-900 {
+	font-family: "Nunito-Black", Arial, sans-serif;
+	font-weight: 900;
 }

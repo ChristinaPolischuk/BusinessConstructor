@@ -1,42 +1,23 @@
-<header class="header">
-  <div class="container">
-    <div class="header__inner">
-      <a href="index.html" class="logo"><img src="img/logo.png" alt="Business Constructor"></a>
-      <nav class="menu">
-        <div class="menu__item">
-          <a href="#" class="menu__link">About Us</a>
-        </div>
-        <div class="menu__item">
-          <a href="#" class="menu__link">Key indicators</a>
-        </div>
-        <div class="menu__item">
-          <a href="#" class="menu__link">Process</a>
-        </div>
-        <div class="menu__item">
-          <a href="#" class="menu__link">Reviews</a>
-        </div>
-        <div class="menu__item">
-          <a href="#" class="menu__link">Contacts</a>
-        </div>
-        <div class="menu__item">
-          <a href="tel:+380440000000" class="menu__link phone">
-            <img src="img/phone.svg" alt="Phone" class="menu__phone">
-            +38 (044) 000-00-00
-          </a>
-          <button class="menu__btn-request btn__bordered">Leave a request</button>
-        </div>
-      </nav>
-      <button class="menu__btn"
-        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
-        aria-label="Main Menu">
-        <svg width="40" height="40" viewBox="0 0 100 100">
-          <path class="menu__btn-line menu__btn-line1"
-            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-          <path class="menu__btn-line menu__btn-line2" d="M 20,50 H 80" />
-          <path class="menu__btn-line menu__btn-line3"
-            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-        </svg>
-      </button>
-    </div>
-  </div>
-</header>
+<div class="header">
+	<div class="container">
+		<div class="header-inner">
+			<a href="index.html" class="logo header-logo"></a>
+
+			<span class="header-description">Офіційне працевлаштування за кордоном</span>
+
+			<div class="header-contacts">
+				<div class="header-contacts__wrap">
+					<a class="header-contacts__phone" href="tel:+380931709588">+38 093 170 9588</a>
+					<img class="header-contacts__dropdown" src="img/arrow_down.svg" alt="Ще телефони">
+				</div>
+				<span class="header-contacts__popup">Зателефонувати Вам?</span>
+			</div>
+
+			<div class="header-chat chat">
+				<span class="chat-title">Онлайн-чат</span>
+				<span class="chat-descr">Розкажемо</span>
+				<span class="chat-descr">Покажемо</span>
+			</div>
+		</div>
+	</div>
+</div>

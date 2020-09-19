@@ -1,122 +1,145 @@
 .main {
-	padding-top: 120px;
-	background-color: $bg_dark;
-	color: #ffffff;
-	transform: skewY(-20deg);
-	position: relative;
-
-	@media (min-width: 640px) {
-		transform: skewY(-7deg);
+	padding-top: 90px;
+	background: url("../img/bg_main.jpg") no-repeat;
+	background-position: -285px -110px;
+	background-size: auto 120%;
+	text-align: center;
+	@media (min-width: 360px) {
+		background-position: -150px 0;
+		background-size: auto;
 	}
-
-	&::after {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		right: 0;
-		background-color: $bg_dark;
-		height: 50%;
-		transform: skewY(20deg);
-
-		@media (min-width: 640px) {
-			transform: skewY(7deg);
-		}
+	@media (min-width: 768px) {
+		padding-top: 142px;
+		background-position: 0 0;
+		background-size: cover;
 	}
-
-	&__inner {
-		transform: skewY(20deg);
-
-		@media (min-width: 640px) {
-			display: flex;
-			justify-content: space-between;
-			transform: skewY(7deg);
-		}
-	}
-
-	&__block {
-		max-width: 290px;
-		margin: 0 auto;
-
+	&-inner {
+		max-width: 270px;
+		margin: 0 auto 20px;
 		@media (min-width: 768px) {
+			max-width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	&-title {
+		@extend %nunito-700;
+		font-size: 26px;
+		line-height: 35px;
+		text-transform: uppercase;
+		@media (min-width: 768px) {
+			width: 100%;
+			font-size: 64px;
+			line-height: 87px;
+		}
+	}
+	&-descr {
+		@extend %nunito-400;
+		font-size: 24px;
+		line-height: 33px;
+		@media (min-width: 768px) {
+			width: 50%;
+			font-size: 36px;
+			line-height: 49px;
+			text-align: left;
+		}
+	}
+	&-form {
+		margin: 15px 0;
+		padding: 15px 30px 20px;
+		background-color: rgba($bg_dark, 0.7);
+		border-radius: 5px;
+		@media (min-width: 768px) {
+			max-width: 378px;
+			width: 50%;
+			padding: 20px 40px;
 			margin: 0;
 		}
-
-		@media (min-width: 1440px) {
-			max-width: 358px;
+		&__text {
+			margin-bottom: 5px;
+			font-size: 16px;
+			line-height: 22px;
+			@media (min-width: 768px) {
+				font-size: 23px;
+				line-height: 31px;
+			}
+			span {
+				font-weight: 700;
+			}
 		}
-
-		&:first-child {
-			margin-bottom: 60px;
-
-			@media (min-width: 640px) {
-				margin-bottom: 0;
+		&__pay {
+			font-size: 14px;
+			line-height: 19px;
+			@media (min-width: 768px) {
+				font-size: 22px;
+				line-height: 30px;
+			}
+		}
+		&__group {
+			margin: 15px 0 20px;
+			position: relative;
+		}
+		&__icon {
+			width: 22px;
+			height: 16px;
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			margin-top: -8px;
+			@media (min-width: 768px) {
+				width: 31px;
+				height: 24px;
+				margin-top: -12px;
+			}
+		}
+		&__phone {
+			padding: 0 5px 0 40px;
+			width: 100%;
+			height: 35px;
+			border: none;
+			outline: none;
+			background-color: rgba($bg_input, 0.7) !important;
+			color: #ffffff;
+			border-radius: 5px;
+			&[placeholder] {
+				color: #ffffff;
+			}
+			&::-webkit-input-placeholder {
+				color: #ffffff;
+			}
+			&::-moz-placeholder {
+				color: #ffffff;
+			}
+			&:-moz-placeholder {
+				color: #ffffff;
+			}
+			&:-ms-input-placeholder {
+				color: #ffffff;
+			}
+			@media (min-width: 768px) {
+				height: 40px;
+				font-size: 18px;
+				padding: 0 5px 0 50px;
+			}
+		}
+		&__btn {
+			@media (min-width: 768px) {
+				min-width: 296px;
+				font-size: 23px;
 			}
 		}
 	}
-
-	&__slogan {
-		margin-bottom: 20px;
-		font-size: 34px;
-		line-height: 40px;
-		@extend %roboto-700;
-
-		@media (min-width: 1440px) {
-			font-size: 38px;
-			line-height: 45px;
-		}
-	}
-
-	&__title {
-		margin-bottom: 20px;
-		font-size: 56px;
-		line-height: 64px;
+	&-details {
+		padding: 12px 0;
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 400;
 		text-transform: uppercase;
-		@extend %roboto-900;
-		color: #ffffff;
-
-		@media (min-width: 1440px) {
-			font-size: 70px;
-			line-height: 76px;
-		}
-	}
-
-	&__description {
-		margin-bottom: 20px;
-		padding-left: 15px;
-		position: relative;
-		font-size: 18px;
-		line-height: 24px;
-		@extend %roboto-700;
-
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 0;
-			height: 100%;
-			width: 1px;
-			background-color: #ffffff;
-		}
-	}
-
-	&__btn {
-		@include btn(144px, 40px, 18px);
-	}
-}
-
-@supports (background-clip: text) or (-webkit-background-clip: text) {
-	.main__title {
-		background-image: url("../img/bgmobile_main-title.png");
-		background-clip: text;
-		-webkit-background-clip: text;
-		background-position: 3px 10px;
-		color: #fff;
-		-webkit-text-fill-color: transparent;
-
-		@media (min-width: 1440px) {
-			background-image: url("../img/bg_main-title.png");
+		background-color: rgba(#000, 0.4);
+		@media (min-width: 768px) {
+			font-size: 26px;
+			line-height: 26px;
 		}
 	}
 }
